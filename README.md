@@ -1,4 +1,4 @@
-# DOI Citation Finder
+# :volcano: DOI Citation Finder
 
 A Python application that extracts the DOI from a PDF file and retrieves
 its citation in BibTeX format using the `doi.org` API.
@@ -38,4 +38,3 @@ its citation in BibTeX format using the `doi.org` API.
 ## License
 
 This project is licensed under the MIT License. Feel free to use, modify, and share this code.
-1. Run the application: ```python D§
