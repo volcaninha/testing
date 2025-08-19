@@ -41,15 +41,15 @@ pip install -r requirements.txt
 ```bash
 python3 doi_citationfinder.py
 ```
-This will start a web server that exposes the Gradio interface on port 7860. You can access tha application by navigating to `http://localhost:7860`in your web browser.
+This will start a web server that exposes the Gradio interface on port 7860. You can access the application by navigating to `http://localhost:7860` in your web browser.
 
-4. Upload a PDF file using the Gradio interface
+4. Upload a PDF file using the Gradio interface. Drag or click to pick a file.
 5. Click "Find Citation" to retrieve the citation in BibTex format
 
 
-## Build the Docker image and run the container
+## Create a containerized version using the Dockerfile
 
-A Docker image is avilable to run the application. Note that you'll need to have Docker installed on your system and the `docker`command available in your shell.
+A Dockerfile is avilable to run the application. Note that you'll need to have Docker installed on your system and the `docker`command available in your shell.
 1. To build the image, navigate to the project directory and run the following command:
 ```bash
 docker build -t doi-citation-finder
@@ -66,12 +66,14 @@ docker run -p 7860:7860 doi-citation-finder
 - Automating citation retrieval for publication workflows
 - Enhancing bibliographic managements tools with DOI-based citation retrieval
 
-## Troubleshooting :wrench:
+## :wrench: Troubleshooting 
 
 While using the DOI Citation Finder, there may occur some issues or errors. It could happen, that:
 - No DOI found in the PDF. Not every document contains a DOI.
 - Error retreiving citation from doi.org API. In this case, the API responds with some error code.
-In case of one of these issues, the Doi Citation Finder will give you a short note in the text window.
+- Since the app is looking for the first occurrence of the "doi"-pattern, it could happen, in theory, that it matches the word "doing" :bomb:. This results in a query with invalid argument. Not intended to implement extra checks for this.
+
+In case of one of these issues, the DOI Citation Finder will give you a short note in the text window.
 
 ## License
 
