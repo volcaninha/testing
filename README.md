@@ -71,7 +71,7 @@ docker run -p 7860:7860 doi-citation-finder
 While using the DOI Citation Finder, there may occur some issues or errors. It could happen, that:
 - No DOI found in the PDF. Not every document contains a DOI.
 - Error retreiving citation from doi.org API. In this case, the API responds with some error code.
-- Since the app is looking for the first occurrence of the "doi"-pattern, it could happen, in theory, that it matches the word "doing" :bomb:. This results in a query with invalid argument. Not intended to implement extra checks for this.
+- Since the app is looking for the first occurrence of the "doi"-pattern, it could happen, in theory, that it matches the word "doing". :bomb: This results in a query with invalid argument. However, not intended to implement extra checks for this.
 
 In case of one of these issues, the DOI Citation Finder will give you a short note in the text window.
 
